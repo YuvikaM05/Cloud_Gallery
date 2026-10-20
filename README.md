@@ -1,9 +1,15 @@
 # CloudGallery
 
+<img width="1920" height="1080" alt="Screenshot 2026-10-20 214320" src="https://github.com/user-attachments/assets/08ee772d-b615-4c0a-97dc-349475ff7c84" />
+
 A Google-Photos-style photo app for the PC. Upload photos, organise them in albums, favourite / bin / restore,
 select thousands at once, share links, and watch your cloud storage and analytics.
 
 **Stack:** React 19 + Vite + Zustand + TanStack Query + Recharts · FastAPI + MongoDB Atlas · Local / Cloudinary / S3-R2 storage · Electron desktop shell.
+
+#view and sort button:
+<img width="332" height="217" alt="Screenshot 2026-10-20 214543" src="https://github.com/user-attachments/assets/960f7f6f-e323-4c73-a1db-69f125696313" />
+<img width="471" height="430" alt="Screenshot 2026-10-20 214551" src="https://github.com/user-attachments/assets/1a87b3b6-7285-43b7-9164-23756324a756" />
 
 ```
 PhotoGalleryApp/
