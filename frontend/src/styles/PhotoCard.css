@@ -1,0 +1,18 @@
+.photo-card { position: relative; width: 100%; height: 100%; border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; user-select: none; outline-offset: 2px; }
+.photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .18s, border-radius .18s; }
+.photo-card:hover img { transform: scale(1.03); }
+.photo-card.selected { background: var(--accent-soft); }
+.photo-card.selected img { transform: scale(.86); border-radius: 10px; }
+.pc-check, .pc-fav, .pc-bottom { opacity: 0; transition: opacity .15s; }
+.photo-card:hover .pc-check, .photo-card:hover .pc-fav, .photo-card:hover .pc-bottom,
+.photo-card:focus-within .pc-check, .photo-card:focus-within .pc-fav, .photo-card:focus-within .pc-bottom,
+.photo-card.selecting .pc-check, .photo-card.selected .pc-check { opacity: 1; }
+.pc-check { position: absolute; top: 8px; left: 8px; width: 24px; height: 24px; border-radius: 50%; border: 2px solid #fff; background: rgba(0, 0, 0, .35); color: #fff; font-size: 14px; font-weight: 700; padding: 0; display: flex; align-items: center; justify-content: center; }
+.photo-card.selected .pc-check { background: var(--accent); border-color: var(--accent); }
+.pc-fav { position: absolute; top: 6px; right: 8px; width: 30px; height: 30px; border-radius: 50%; border: none; background: rgba(0, 0, 0, .35); font-size: 15px; padding: 0; display: flex; align-items: center; justify-content: center; }
+.pc-fav.on { opacity: 1; }
+.pc-days { position: absolute; top: 8px; right: 8px; padding: 2px 8px; border-radius: 99px; background: rgba(0, 0, 0, .6); color: #fff; font-size: 12px; }
+.pc-bottom { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 4px; padding: 22px 6px 6px 10px; background: linear-gradient(transparent, rgba(0, 0, 0, .65)); color: #fff; }
+.pc-name { flex: 1; font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pc-menu-btn { width: 28px; height: 28px; border-radius: 50%; border: none; background: transparent; color: #fff; font-size: 18px; line-height: 1; }
+.pc-menu-btn:hover { background: rgba(255, 255, 255, .25); }

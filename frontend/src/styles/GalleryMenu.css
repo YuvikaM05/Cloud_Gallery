@@ -1,0 +1,11 @@
+.library { flex: 1; min-height: 0; display: flex; flex-direction: column; position: relative; }
+.library-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 8px; gap: 12px; }
+.library-head h2 { font-size: 22px; }
+.library-head-actions { display: flex; align-items: center; gap: 8px; }
+.page-menu-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); font-size: 20px; line-height: 1; }
+.page-menu-btn:hover { background: var(--surface-2); }
+.selection-toolbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 10px; margin: 0 16px 8px; padding: 8px 12px; background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 14px; box-shadow: var(--shadow); flex-wrap: wrap; }
+.sel-count { min-width: 110px; }
+.sel-hint { color: var(--muted); }
+.sel-spacer { flex: 1; }
+.sel-actions { display: flex; gap: 6px; flex-wrap: wrap; }

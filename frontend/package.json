@@ -1,0 +1,64 @@
+{
+  "name": "cloudgallery",
+  "productName": "CloudGallery",
+  "private": true,
+  "version": "2.0.0",
+  "description": "CloudGallery - a Google-Photos-style desktop photo app",
+  "author": "CloudGallery",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "electron:dev": "concurrently -k -n vite,electron \"vite --host 127.0.0.1 --port 5173 --strictPort\" \"wait-on tcp:127.0.0.1:5173 && cross-env CG_START_BACKEND=1 electron .\"",
+    "electron:build": "vite build && electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.59.0",
+    "axios": "^1.7.7",
+    "chokidar": "^3.6.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.1",
+    "recharts": "^2.15.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@testing-library/jest-dom": "^6.6.0",
+    "@testing-library/react": "^16.1.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "eslint": "^10.5.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.6.0",
+    "jsdom": "^25.0.1",
+    "vite": "^8.1.0",
+    "vitest": "latest",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "com.cloudgallery.app",
+    "productName": "CloudGallery",
+    "directories": { "output": "release", "buildResources": "build" },
+    "files": ["dist/**/*", "electron/**/*", "package.json"],
+    "extraResources": [
+      {
+        "from": "../backend",
+        "to": "backend",
+        "filter": ["**/*", "!venv/**", "!.venv/**", "!**/__pycache__/**", "!uploads/**", "!.env", "!tests/**"]
+      }
+    ],
+    "win": { "target": "nsis", "icon": "build/icon.ico" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}

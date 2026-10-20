@@ -1,0 +1,11 @@
+.grid-scroll { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; position: relative; }
+.grid-inner { position: relative; width: 100%; }
+.tile-slot { position: absolute; }
+.group-header { position: absolute; display: flex; align-items: center; gap: 12px; }
+.group-header h3 { font-size: 16px; font-weight: 600; }
+.group-count { color: var(--muted); font-size: 13px; }
+.group-check { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--muted); background: transparent; color: #fff; font-size: 13px; padding: 0; display: flex; align-items: center; justify-content: center; opacity: .5; }
+.group-header:hover .group-check, .group-check.on { opacity: 1; }
+.group-check.on { background: var(--accent); border-color: var(--accent); }
+.select-rect { position: absolute; border: 1.5px solid var(--accent); background: color-mix(in srgb, var(--accent) 18%, transparent); border-radius: 3px; pointer-events: none; z-index: 5; }
+.grid-loading { position: absolute; left: 0; right: 0; text-align: center; color: var(--muted); }

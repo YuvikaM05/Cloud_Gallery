@@ -1,0 +1,20 @@
+.header { height: var(--header-h); flex-shrink: 0; display: flex; align-items: center; gap: 20px; padding: 0 20px; background: var(--surface); border-bottom: 1px solid var(--border); z-index: 50; }
+.logo-link { display: flex; align-items: center; gap: 10px; color: var(--text); width: 220px; }
+.logo-img { width: 38px; height: 38px; object-fit: contain; border-radius: 8px; }
+.logo-text { font-size: 20px; font-weight: 700; letter-spacing: -.02em; }
+.search-bar { flex: 1; max-width: 640px; display: flex; align-items: center; gap: 8px; background: var(--surface-2); border-radius: 999px; padding: 0 8px 0 16px; height: 42px; border: 1px solid transparent; }
+.search-bar:focus-within { background: var(--surface); border-color: var(--accent); box-shadow: var(--shadow); }
+.search-bar input { flex: 1; border: none; background: transparent; outline: none; height: 100%; min-width: 0; }
+.header-actions { margin-left: auto; display: flex; align-items: center; gap: 6px; }
+.bell { font-size: 18px; }
+.badge { position: absolute; top: 2px; right: 0; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: var(--danger); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.avatar { width: 36px; height: 36px; border-radius: 50%; border: none; background: var(--accent); color: var(--accent-text); font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.avatar.big { width: 44px; height: 44px; font-size: 18px; }
+.profile-card { display: flex; gap: 12px; align-items: center; padding: 10px 12px; }
+.notif-panel { width: 340px; max-width: 80vw; }
+.notif-head { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; }
+.notif { display: flex; gap: 10px; padding: 10px 12px; border-radius: 8px; }
+.notif.unread { background: var(--accent-soft); }
+.notif-icon { font-size: 18px; } .notif-title { font-weight: 600; } .notif-body, .notif-time { color: var(--muted); font-size: 12.5px; }
+.notif-empty { padding: 16px; text-align: center; }
+@media (max-width: 900px) { .logo-text { display: none; } .logo-link { width: auto; } }
